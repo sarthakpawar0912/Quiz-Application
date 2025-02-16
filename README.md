@@ -43,3 +43,83 @@ This **Quiz Application** allows **users** to take online quizzes while enabling
 #### Signup  
 ```http
 POST /sign-up
+Request Body:
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "password": "password123"
+}
+
+Response Example:
+{
+  "id": 1,
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "role": "USER"
+}
+
+
+Login API
+Endpoint:
+
+POST /login
+Request Body:
+{
+  "email": "john.doe@example.com",
+  "password": "password123"
+}
+
+Response Example:
+{
+  "id": 1,
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "role": "USER",
+  "token": "xyz123abc456"
+}
+
+📝 Quiz APIs
+Create a Quiz
+Endpoint:
+POST /quiz/create
+Request Body:
+{
+  "title": "Java Basics",
+  "description": "A quiz on core Java concepts",
+  "time": 30
+}
+
+Response Example:
+{
+  "quizId": 101,
+  "title": "Java Basics",
+  "description": "A quiz on core Java concepts",
+  "time": 30
+}
+
+Add a Question to a Quiz
+
+Endpoint:
+
+POST /quiz/add-question
+
+Request Body:
+{
+  "questionText": "What is Java?",
+  "optionA": "Programming Language",
+  "optionB": "Operating System",
+  "optionC": "Database",
+  "optionD": "None of the above",
+  "correctOption": "A"
+}
+Response Example:
+
+{
+  "questionId": 201,
+  "questionText": "What is Java?",
+  "optionA": "Programming Language",
+  "optionB": "Operating System",
+  "optionC": "Database",
+  "optionD": "None of the above",
+  "correctOption": "A"
+}
