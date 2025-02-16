@@ -59,7 +59,6 @@ Response Example:
   "role": "USER"
 }
 
-
 Login API
 Endpoint:
 POST /login
