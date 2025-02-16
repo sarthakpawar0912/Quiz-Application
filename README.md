@@ -42,6 +42,7 @@ This **Quiz Application** allows **users** to take online quizzes while enabling
 ### 📝 User APIs  
 #### Signup  
 ```http
+
 POST /sign-up
 Request Body:
 {
@@ -61,8 +62,8 @@ Response Example:
 
 Login API
 Endpoint:
-
 POST /login
+
 Request Body:
 {
   "email": "john.doe@example.com",
@@ -78,6 +79,8 @@ Response Example:
   "token": "xyz123abc456"
 }
 
+
+
 📝 Quiz APIs
 Create a Quiz
 Endpoint:
@@ -89,6 +92,7 @@ Request Body:
   "time": 30
 }
 
+
 Response Example:
 {
   "quizId": 101,
@@ -98,11 +102,8 @@ Response Example:
 }
 
 Add a Question to a Quiz
-
 Endpoint:
-
 POST /quiz/add-question
-
 Request Body:
 {
   "questionText": "What is Java?",
@@ -112,8 +113,8 @@ Request Body:
   "optionD": "None of the above",
   "correctOption": "A"
 }
-Response Example:
 
+Response Example:
 {
   "questionId": 201,
   "questionText": "What is Java?",
