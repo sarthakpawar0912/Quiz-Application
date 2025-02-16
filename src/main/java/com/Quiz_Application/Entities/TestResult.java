@@ -11,17 +11,12 @@ public class TestResult {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  int id;
-
     private int totalQuestions;
-
     private int correctAnswers;
-
     private double percentage;
-
     @ManyToOne
     @JoinColumn(name = "test_id")
     private Test test;
-
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
@@ -34,10 +29,8 @@ public class TestResult {
         this.test = test;
         this.user = user;
     }
-
     public TestResult() {
     }
-
     @Override
     public String toString() {
         return "TestResult{" +
@@ -108,9 +101,4 @@ public class TestResult {
         dto.setUserName(user.getName());
         return dto;
     }
-
-
-
-
-
 }
