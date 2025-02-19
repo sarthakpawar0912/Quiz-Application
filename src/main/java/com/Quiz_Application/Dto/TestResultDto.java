@@ -5,15 +5,10 @@ import lombok.Data;
 @Data
 public class TestResultDto {
     private  int id;
-
     private int totalQuestions;
-
     private int correctAnswers;
-
     private double percentage;
-
     private String testName;
-
     private String userName;
 
     public TestResultDto(int id, int totalQuestions, int correctAnswers, double percentage, String testName, String userName) {

@@ -6,12 +6,8 @@ import java.util.List;
 
 @Data
 public class TestDetailsDto {
-
-
     private TestDto testDto;
-
     private List<QuestionDto> questionDto;
-
     public TestDetailsDto(TestDto testDto, List<QuestionDto> questionDto) {
         this.testDto = testDto;
         this.questionDto = questionDto;

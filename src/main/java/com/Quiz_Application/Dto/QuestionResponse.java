@@ -5,14 +5,11 @@ import lombok.Data;
 @Data
 public class QuestionResponse {
       private Long questionId;
-
       private  String selectedOption;
-
     public QuestionResponse(Long questionId, String selectedOption) {
         this.questionId = questionId;
         this.selectedOption = selectedOption;
     }
-
     public QuestionResponse() {
     }
 
@@ -31,7 +28,6 @@ public class QuestionResponse {
     public void setSelectedOption(String selectedOption) {
         this.selectedOption = selectedOption;
     }
-
     @Override
     public String toString() {
         return "QuestionResponse{" +

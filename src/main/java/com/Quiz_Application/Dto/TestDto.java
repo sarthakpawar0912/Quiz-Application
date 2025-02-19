@@ -6,13 +6,9 @@ import lombok.Data;
 public class TestDto {
 
     private Long id;
-
     private String title;
-
     private  String description;
-
     private Long time;
-
     public Long getId() {
         return id;
     }

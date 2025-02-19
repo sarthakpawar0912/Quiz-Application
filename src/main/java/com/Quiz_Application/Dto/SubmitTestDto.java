@@ -4,11 +4,8 @@ import java.util.List;
 
 public class SubmitTestDto {
     private Long id;
-
     private Long userId;
-
     private List<QuestionResponse> responses;
-
     public SubmitTestDto(Long id, Long userId, List<QuestionResponse> responses) {
         this.id = id;
         this.userId = userId;
