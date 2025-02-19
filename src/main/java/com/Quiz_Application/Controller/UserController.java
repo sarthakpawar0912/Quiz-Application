@@ -20,12 +20,10 @@ public class UserController {
         if (userService.hasUserWithEmail(user.getEmail())) {
             return new ResponseEntity<>("User already exists", HttpStatus.BAD_REQUEST);
         }
-
         User createdUser = userService.createUser(user);
         if (createdUser == null) {
             return new ResponseEntity<>("User not created, please try again later", HttpStatus.INTERNAL_SERVER_ERROR);
         }
-
         return new ResponseEntity<>(createdUser, HttpStatus.CREATED); // Status 201 Created
     }
 
