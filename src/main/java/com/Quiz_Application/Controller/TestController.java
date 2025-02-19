@@ -54,7 +54,6 @@ public class TestController {
         }
     }
 
-
     @PostMapping("/submit-test")
     public ResponseEntity<?> submitTest(@RequestBody SubmitTestDto dto){
         try {
@@ -81,7 +80,4 @@ public class TestController {
             return  new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST);
         }
     }
-
-
-
 }
