@@ -26,7 +26,6 @@ public class TestController {
         }
     }
 
-
     @PostMapping("/question")
     public ResponseEntity<?> addQuestionInTest(@RequestBody QuestionDto dto){
         try {
@@ -35,7 +34,6 @@ public class TestController {
             return new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST);
         }
     }
-
 
     @GetMapping
     public ResponseEntity<?> getAllTest(){
