@@ -5,19 +5,12 @@ import lombok.Data;
 @Data
 public class QuestionDto {
     private  Long id;
-
     private String questionText;
-
     private String optionA;
-
     private String optionB;
-
     private String optionC;
-
     private String optionD;
-
     private String correctOption;
-
     public QuestionDto(Long id, String questionText, String optionA, String optionB, String optionC, String optionD, String correctOption) {
         this.id = id;
         this.questionText = questionText;
@@ -27,10 +20,8 @@ public class QuestionDto {
         this.optionD = optionD;
         this.correctOption = correctOption;
     }
-
     public QuestionDto() {
     }
-
     @Override
     public String toString() {
         return "QuestionDto{" +
@@ -43,7 +34,6 @@ public class QuestionDto {
                 ", correctOption='" + correctOption + '\'' +
                 '}';
     }
-
     public Long getId() {
         return id;
     }
