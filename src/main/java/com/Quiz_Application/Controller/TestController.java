@@ -44,7 +44,6 @@ public class TestController {
         }
     }
 
-
     @GetMapping("/{id}")
     public ResponseEntity<?> getAllQuestions(@PathVariable Long id){
         try {
@@ -54,7 +53,6 @@ public class TestController {
             return new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST);
         }
     }
-
 
 
     @PostMapping("/submit-test")
