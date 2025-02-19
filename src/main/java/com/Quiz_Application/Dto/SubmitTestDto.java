@@ -11,10 +11,8 @@ public class SubmitTestDto {
         this.userId = userId;
         this.responses = responses;
     }
-
     public SubmitTestDto() {
     }
-
     @Override
     public String toString() {
         return "SubmitTestDto{" +
@@ -23,27 +21,21 @@ public class SubmitTestDto {
                 ", responses=" + responses +
                 '}';
     }
-
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
-
     public Long getUserId() {
         return userId;
     }
-
     public void setUserId(Long userId) {
         this.userId = userId;
     }
-
     public List<QuestionResponse> getResponses() {
         return responses;
     }
-
     public void setResponses(List<QuestionResponse> responses) {
         this.responses = responses;
     }
