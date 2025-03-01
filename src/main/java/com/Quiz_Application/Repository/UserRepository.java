@@ -1,3 +1,4 @@
+
 package com.Quiz_Application.Repository;
 
 import com.Quiz_Application.Entities.User;
@@ -9,8 +10,7 @@ import java.util.Optional;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-
-    Optional<User> findByRole(UserRole role); // Ensure it returns Optional<User>
+    Optional<User> findByRole(UserRole role);
     Optional<User> findByEmail(String email);
-    boolean existsByEmail(String email);
+    Boolean existsByEmail(String email);
 }

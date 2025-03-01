@@ -31,17 +31,7 @@ public class TestResult {
     }
     public TestResult() {
     }
-    @Override
-    public String toString() {
-        return "TestResult{" +
-                "id=" + id +
-                ", totalQuestions=" + totalQuestions +
-                ", correctAnswers=" + correctAnswers +
-                ", percentage=" + percentage +
-                ", test=" + test +
-                ", user=" + user +
-                '}';
-    }
+
 
     public int getId() {
         return id;
@@ -79,6 +69,7 @@ public class TestResult {
         return test;
     }
 
+
     public void setTest(Test test) {
         this.test = test;
     }
@@ -90,6 +81,8 @@ public class TestResult {
     public void setUser(User user) {
         this.user = user;
     }
+
+
 
     public TestResultDto getDto(){
         TestResultDto dto=new TestResultDto();

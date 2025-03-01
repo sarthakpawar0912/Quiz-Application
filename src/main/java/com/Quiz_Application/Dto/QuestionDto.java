@@ -4,6 +4,7 @@ import lombok.Data;
 
 @Data
 public class QuestionDto {
+
     private  Long id;
     private String questionText;
     private String optionA;
@@ -11,6 +12,7 @@ public class QuestionDto {
     private String optionC;
     private String optionD;
     private String correctOption;
+
     public QuestionDto(Long id, String questionText, String optionA, String optionB, String optionC, String optionD, String correctOption) {
         this.id = id;
         this.questionText = questionText;
@@ -22,18 +24,7 @@ public class QuestionDto {
     }
     public QuestionDto() {
     }
-    @Override
-    public String toString() {
-        return "QuestionDto{" +
-                "id=" + id +
-                ", questionText='" + questionText + '\'' +
-                ", optionA='" + optionA + '\'' +
-                ", optionB='" + optionB + '\'' +
-                ", optionC='" + optionC + '\'' +
-                ", optionD='" + optionD + '\'' +
-                ", correctOption='" + correctOption + '\'' +
-                '}';
-    }
+
     public Long getId() {
         return id;
     }

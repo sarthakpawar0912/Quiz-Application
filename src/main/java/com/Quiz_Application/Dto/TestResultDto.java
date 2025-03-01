@@ -23,17 +23,6 @@ public class TestResultDto {
     public TestResultDto() {
     }
 
-    @Override
-    public String toString() {
-        return "TestResultDto{" +
-                "id=" + id +
-                ", totalQuestions=" + totalQuestions +
-                ", correctAnswers=" + correctAnswers +
-                ", percentage=" + percentage +
-                ", testName='" + testName + '\'' +
-                ", userName='" + userName + '\'' +
-                '}';
-    }
 
     public int getId() {
         return id;

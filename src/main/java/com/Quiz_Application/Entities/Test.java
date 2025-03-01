@@ -16,6 +16,7 @@ public class Test {
     private String title;
     private  String description;
     private Long time;
+
     @OneToMany(mappedBy = "test",cascade = CascadeType.ALL)
     private List<Question> questions;
 
@@ -70,16 +71,9 @@ public class Test {
         this.questions = questions;
     }
 
-    @Override
-    public String toString() {
-        return "Test{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", time=" + time +
-                ", questions=" + questions +
-                '}';
-    }
+
+
+
 
     public TestDto getDto(){
         TestDto testDto=new TestDto();

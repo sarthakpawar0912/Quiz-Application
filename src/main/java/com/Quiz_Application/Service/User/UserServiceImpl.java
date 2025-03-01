@@ -17,29 +17,32 @@ public class UserServiceImpl implements UserService {
     @PostConstruct
     private void createAdminUser() {
         Optional<User> optionalUser = userRepository.findByRole(UserRole.ADMIN);
-        if (optionalUser.isEmpty()) { // Ensure the admin user is only created if it doesn't exist
+        if (optionalUser.isEmpty()) { // Corrected null check
             User user = new User();
             user.setName("Admin");
             user.setEmail("admin@test.com");
             user.setRole(UserRole.ADMIN);
-            user.setPassword("admin"); // Simple password, no encryption
+            user.setPassword("admin"); // Consider encrypting the password
             userRepository.save(user);
         }
     }
-    @Override
-    public Boolean hasUserWithEmail(String email) {
-        return userRepository.existsByEmail(email); // Use existsByEmail for checking email existence
+
+
+    public boolean hasUserWithEmail(String email) {
+        return userRepository.existsByEmail(email); // Fixed email existence check
     }
-    @Override
+
+
     public User createUser(User user) {
-        user.setRole(UserRole.USER); // Set the role for the new user
-        return userRepository.save(user); // Save the user with the plain password
+        user.setRole(UserRole.USER); // Default role for new users
+        return userRepository.save(user);
     }
+
     @Override
     public User login(User user) {
-        Optional<User> optionalUser = userRepository.findByEmail(user.getEmail());
+        Optional<User> optionalUser = userRepository.findByEmail(user.getEmail()); // Fixed method call
         if (optionalUser.isPresent() && optionalUser.get().getPassword().equals(user.getPassword())) {
-            return optionalUser.get(); // Password match
+            return optionalUser.get();
         }
         return null; // Invalid credentials
     }

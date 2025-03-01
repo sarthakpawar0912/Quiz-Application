@@ -10,20 +10,20 @@ public class Question {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Long id;
+    private Long id;
     private String questionText;
     private String optionA;
     private String optionB;
     private String optionC;
     private String optionD;
     private String correctOption;
-
     @ManyToOne
     @JoinColumn(name = "test_id")
     private Test test;
 
-    public QuestionDto getDto(){
-        QuestionDto dto=new QuestionDto();
+
+    public QuestionDto getDto() {
+        QuestionDto dto = new QuestionDto();
         dto.setId(id);
         dto.setQuestionText(questionText);
         dto.setOptionA(optionA);
@@ -112,17 +112,4 @@ public class Question {
         this.test = test;
     }
 
-    @Override
-    public String toString() {
-        return "Question{" +
-                "id=" + id +
-                ", questionText='" + questionText + '\'' +
-                ", optionA='" + optionA + '\'' +
-                ", optionB='" + optionB + '\'' +
-                ", optionC='" + optionC + '\'' +
-                ", optionD='" + optionD + '\'' +
-                ", correctOption='" + correctOption + '\'' +
-                ", test=" + test +
-                '}';
-    }
 }

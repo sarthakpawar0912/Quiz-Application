@@ -1,42 +1,47 @@
 package com.Quiz_Application.Dto;
 
-import java.util.List;
+import lombok.Data;
 
+import java.util.List;
+ @Data
 public class SubmitTestDto {
-    private Long id;
+
+    private Long testId;
     private Long userId;
     private List<QuestionResponse> responses;
-    public SubmitTestDto(Long id, Long userId, List<QuestionResponse> responses) {
-        this.id = id;
+
+    public SubmitTestDto(Long testId, Long userId, List<QuestionResponse> responses) {
+        this.testId = testId;
         this.userId = userId;
         this.responses = responses;
     }
-    public SubmitTestDto() {
+
+    public Long getTestId() {
+        return testId;
     }
-    @Override
-    public String toString() {
-        return "SubmitTestDto{" +
-                "id=" + id +
-                ", userId=" + userId +
-                ", responses=" + responses +
-                '}';
+
+    public void setTestId(Long testId) {
+        this.testId = testId;
     }
-    public Long getId() {
-        return id;
-    }
-    public void setId(Long id) {
-        this.id = id;
-    }
+
     public Long getUserId() {
         return userId;
     }
+
     public void setUserId(Long userId) {
         this.userId = userId;
     }
+
     public List<QuestionResponse> getResponses() {
         return responses;
     }
+
     public void setResponses(List<QuestionResponse> responses) {
         this.responses = responses;
+    }
+
+
+
+    public SubmitTestDto() {
     }
 }

@@ -51,15 +51,7 @@ public class TestDto {
     public TestDto() {
     }
 
-    @Override
-    public String toString() {
-        return "TestDto{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", time=" + time +
-                '}';
-    }
+
 
 
 }
