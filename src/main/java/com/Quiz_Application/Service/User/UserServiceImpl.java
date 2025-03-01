@@ -11,6 +11,7 @@ import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {
+
     @Autowired
     private UserRepository userRepository;
 
@@ -27,11 +28,9 @@ public class UserServiceImpl implements UserService {
         }
     }
 
-
     public boolean hasUserWithEmail(String email) {
         return userRepository.existsByEmail(email); // Fixed email existence check
     }
-
 
     public User createUser(User user) {
         user.setRole(UserRole.USER); // Default role for new users
@@ -46,4 +45,5 @@ public class UserServiceImpl implements UserService {
         }
         return null; // Invalid credentials
     }
+
 }
