@@ -21,7 +21,6 @@ public class Question {
     @JoinColumn(name = "test_id")
     private Test test;
 
-
     public QuestionDto getDto() {
         QuestionDto dto = new QuestionDto();
         dto.setId(id);
