@@ -17,6 +17,7 @@ public class TestController {
     @Autowired
     private TestService testService;
 
+
     @PostMapping()
     public ResponseEntity<?> createTest(@RequestBody TestDto dto){
         try {
@@ -25,6 +26,7 @@ public class TestController {
             return new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST);
         }
     }
+
 
     @PostMapping("/question")
     public ResponseEntity<?> addQuestionInTest(@RequestBody QuestionDto dto){
@@ -35,6 +37,7 @@ public class TestController {
         }
     }
 
+
     @GetMapping
     public ResponseEntity<?> getAllTest(){
         try {
@@ -43,6 +46,7 @@ public class TestController {
             return new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST );
         }
     }
+
 
     @GetMapping("/{id}")
     public ResponseEntity<?> getAllQuestions(@PathVariable Long id){
@@ -54,6 +58,7 @@ public class TestController {
         }
     }
 
+
     @PostMapping("/submit-test")
     public ResponseEntity<?> submitTest(@RequestBody SubmitTestDto dto){
         try {
@@ -62,6 +67,7 @@ public class TestController {
             return new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST);
         }
     }
+
 
     @GetMapping("/test-result")
     public ResponseEntity<?> getAllTestResult(){
@@ -72,6 +78,7 @@ public class TestController {
         }
     }
 
+
     @GetMapping("/test-result/{id}")
     public ResponseEntity<?> getAllTestResultOfUser(@PathVariable Long id){
         try {
@@ -80,4 +87,5 @@ public class TestController {
             return  new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST);
         }
     }
+
 }
