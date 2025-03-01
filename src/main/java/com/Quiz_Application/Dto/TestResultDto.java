@@ -1,9 +1,9 @@
 package com.Quiz_Application.Dto;
 
 import lombok.Data;
-
 @Data
 public class TestResultDto {
+
     private  int id;
     private int totalQuestions;
     private int correctAnswers;
@@ -71,4 +71,5 @@ public class TestResultDto {
     public void setUserName(String userName) {
         this.userName = userName;
     }
+
 }
