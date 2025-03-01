@@ -97,7 +97,6 @@ public class TestServiceImpl implements TestService {
                     .orElseThrow(() -> new EntityNotFoundException("User Not found"));
 
             int correctAnswer = 0;
-
             // Process each response
             for (QuestionResponse response : request.getResponses()) {
                 System.out.println("🔍 Processing Response: Question ID = " + response.getQuestionId() + ", Selected Option = " + response.getSelectedOption());
@@ -146,6 +145,7 @@ public class TestServiceImpl implements TestService {
             throw new RuntimeException("Failed to submit test: " + e.getMessage());
         }
     }
+
     @Override
     public List<TestResultDto> getAllTestResult() {
         return testResultRepository.findAll().stream().map(TestResult::getDto).collect(Collectors.toList());
@@ -155,4 +155,5 @@ public class TestServiceImpl implements TestService {
     public List<TestResultDto> getAllResultsOfUser(Long userId) {
         return testResultRepository.findAllByUserId(userId).stream().map(TestResult::getDto).collect(Collectors.toList());
     }
+
 }
