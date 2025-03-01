@@ -14,7 +14,6 @@ public class User {
     private String email;
     private String password;
     private String name;
-
     @Enumerated(EnumType.STRING)
     private UserRole role;
 
@@ -79,4 +78,5 @@ public class User {
     public void setRole(UserRole role) {
         this.role = role;
     }
+
 }
