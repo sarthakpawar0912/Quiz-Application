@@ -16,7 +16,6 @@ public class Test {
     private String title;
     private  String description;
     private Long time;
-
     @OneToMany(mappedBy = "test",cascade = CascadeType.ALL)
     private List<Question> questions;
 
@@ -71,10 +70,6 @@ public class Test {
         this.questions = questions;
     }
 
-
-
-
-
     public TestDto getDto(){
         TestDto testDto=new TestDto();
         testDto.setId(id);
@@ -83,4 +78,5 @@ public class Test {
         testDto.setTime(time);
         return testDto;
     }
+
 }
