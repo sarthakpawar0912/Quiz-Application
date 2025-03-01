@@ -29,9 +29,9 @@ public class TestResult {
         this.test = test;
         this.user = user;
     }
+
     public TestResult() {
     }
-
 
     public int getId() {
         return id;
@@ -82,8 +82,6 @@ public class TestResult {
         this.user = user;
     }
 
-
-
     public TestResultDto getDto(){
         TestResultDto dto=new TestResultDto();
         dto.setId(id);
@@ -94,4 +92,5 @@ public class TestResult {
         dto.setUserName(user.getName());
         return dto;
     }
+
 }
