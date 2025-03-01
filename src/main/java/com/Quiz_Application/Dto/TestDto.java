@@ -9,6 +9,7 @@ public class TestDto {
     private String title;
     private  String description;
     private Long time;
+
     public Long getId() {
         return id;
     }
@@ -50,8 +51,5 @@ public class TestDto {
 
     public TestDto() {
     }
-
-
-
 
 }
