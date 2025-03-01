@@ -1,9 +1,8 @@
 package com.Quiz_Application.Dto;
 
 import lombok.Data;
-
 import java.util.List;
- @Data
+@Data
 public class SubmitTestDto {
 
     private Long testId;
@@ -40,8 +39,7 @@ public class SubmitTestDto {
         this.responses = responses;
     }
 
-
-
     public SubmitTestDto() {
     }
+
 }
