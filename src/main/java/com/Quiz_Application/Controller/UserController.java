@@ -15,6 +15,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+
     @PostMapping("/sign-up")
     public ResponseEntity<?> signupUser(@RequestBody User user) {
         if (userService.hasUserWithEmail(user.getEmail())) {
@@ -27,6 +28,7 @@ public class UserController {
         return new ResponseEntity<>(createdUser, HttpStatus.CREATED); // Status 201 Created
     }
 
+
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody User user) {
         User dbUser = userService.login(user);
@@ -35,4 +37,5 @@ public class UserController {
         }
         return new ResponseEntity<>(dbUser, HttpStatus.OK);
     }
+
 }
