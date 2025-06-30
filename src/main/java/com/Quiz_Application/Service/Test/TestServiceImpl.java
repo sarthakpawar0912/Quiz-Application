@@ -56,7 +56,9 @@ public class TestServiceImpl implements TestService {
             question.setTest(optionalTest.get());
 
             question.setQuestionText(dto.getQuestionText());
+
             question.setOptionA(dto.getOptionA());
+
             question.setOptionB(dto.getOptionB());
             question.setOptionC(dto.getOptionC());
             question.setOptionD(dto.getOptionD());
