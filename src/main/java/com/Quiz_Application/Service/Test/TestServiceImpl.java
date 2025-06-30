@@ -44,12 +44,13 @@ public class TestServiceImpl implements TestService {
         test.setTime(dto.getTime());
 
         return testRepository.save(test).getDto();
-
     }
 
     @Override
     public QuestionDto addQuestionInTest(QuestionDto dto) {
+
         Optional<Test> optionalTest = testRepository.findById(dto.getId());
+
         if (optionalTest.isPresent()) {
             Question question = new Question();
             question.setTest(optionalTest.get());
