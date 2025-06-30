@@ -67,6 +67,7 @@ public class TestServiceImpl implements TestService {
 
     @Override
     public List<TestDto> getAllTests() {
+
         List<TestDto> tests = testRepository.findAll().stream()
                 .peek(test -> test.setTime(test.getQuestions().size() * test.getTime()))
                 .map(Test::getDto)
