@@ -52,11 +52,9 @@ public class TestServiceImpl implements TestService {
         if (optionalTest.isPresent()) {
 
             Question question = new Question();
-
             question.setTest(optionalTest.get());
 
             question.setQuestionText(dto.getQuestionText());
-
             question.setOptionA(dto.getOptionA());
 
             question.setOptionB(dto.getOptionB());
