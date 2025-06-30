@@ -73,7 +73,6 @@ public class TestServiceImpl implements TestService {
                 .map(Test::getDto)
                 .collect(Collectors.toList());
         Collections.reverse(tests);
-
         return tests;
 
     }
