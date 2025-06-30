@@ -81,7 +81,9 @@ public class TestServiceImpl implements TestService {
     public TestDetailsDto getAllQuestionsByTest(Long id) {
 
         Optional<Test> optionalTest = testRepository.findById(id);
+
         TestDetailsDto testDetailsDto = new TestDetailsDto();
+
         if (optionalTest.isPresent()) {
             TestDto testDto = optionalTest.get().getDto();
             testDto.setTime(optionalTest.get().getTime() * optionalTest.get().getQuestions().size());
@@ -89,6 +91,7 @@ public class TestServiceImpl implements TestService {
             testDetailsDto.setQuestionDto(optionalTest.get().getQuestions().stream().map(Question::getDto).toList());
             return testDetailsDto;
         }
+
         return testDetailsDto;
     }
 
