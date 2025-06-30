@@ -38,6 +38,7 @@ public class TestServiceImpl implements TestService {
         Test test = new Test();
 
         test.setTitle(dto.getTitle());
+
         test.setDescription(dto.getDescription());
         test.setTime(dto.getTime());
         return testRepository.save(test).getDto();
