@@ -64,7 +64,9 @@ public class TestServiceImpl implements TestService {
             question.setOptionC(dto.getOptionC());
 
             question.setOptionD(dto.getOptionD());
+
             question.setCorrectOption(dto.getCorrectOption());
+
             return questionRepository.save(question).getDto();
         }
         throw new EntityNotFoundException("Test not Found");
