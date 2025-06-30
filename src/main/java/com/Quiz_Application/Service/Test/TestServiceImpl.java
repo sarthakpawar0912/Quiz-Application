@@ -40,8 +40,11 @@ public class TestServiceImpl implements TestService {
         test.setTitle(dto.getTitle());
 
         test.setDescription(dto.getDescription());
+
         test.setTime(dto.getTime());
+
         return testRepository.save(test).getDto();
+
     }
 
     @Override
