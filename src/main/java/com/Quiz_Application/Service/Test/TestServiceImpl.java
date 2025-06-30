@@ -72,6 +72,7 @@ public class TestServiceImpl implements TestService {
                 .peek(test -> test.setTime(test.getQuestions().size() * test.getTime()))
                 .map(Test::getDto)
                 .collect(Collectors.toList());
+
         Collections.reverse(tests);
         return tests;
     }
