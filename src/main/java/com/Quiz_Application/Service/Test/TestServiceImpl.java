@@ -48,12 +48,10 @@ public class TestServiceImpl implements TestService {
     public QuestionDto addQuestionInTest(QuestionDto dto) {
 
         Optional<Test> optionalTest = testRepository.findById(dto.getId());
-
         if (optionalTest.isPresent()) {
 
             Question question = new Question();
             question.setTest(optionalTest.get());
-
             question.setQuestionText(dto.getQuestionText());
             question.setOptionA(dto.getOptionA());
             question.setOptionB(dto.getOptionB());
